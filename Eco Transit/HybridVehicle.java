@@ -6,16 +6,16 @@ public class HybridVehicle extends Vehicle {
         this.emissionsRate = emissionsRate;
     }
 
-    @Override
-    public double calculateCarbonFootprint() {
-        return emissionsRate;
-    }
-
     public double getEmissionsRate() {
         return emissionsRate;
     }
 
     public void setEmissionsRate(double emissionsRate) {
         this.emissionsRate = emissionsRate;
+    }
+
+    @Override
+    public double calculateCarbonFootprint() {
+        return emissionsRate; // Carbon footprint is based on emissions rate for hybrid vehicles
     }
 }
